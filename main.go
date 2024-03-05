@@ -12,7 +12,7 @@ func main() {
 		log.Fatal("cannot create the server", err)
 	}
 
-	err = server.Start(":11000")
+	err = server.Start(":9000")
 
 	if err != nil {
 		log.Fatal("cannot start the server", err)
