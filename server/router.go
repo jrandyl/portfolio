@@ -13,11 +13,13 @@ func (s *Server) SetupRouter() {
 
 	web.RegisterHandler(s.router)
 
+	//pages
+	s.router.GET("/", s.index)
 	s.router.GET("/projects", s.project)
-	// s.router.GET("/about", s.about)
-	// s.router.GET("/product", s.product)
+	s.router.GET("/experience", s.experience)
+	s.router.GET("/get-in-touch", s.getInTouch)
 
-	// s.router.POST("/login", s.userLogin)
-	// app := s.router.Group("/app")
-	// app.GET("/dashboard", s.index)
+	//components
+	s.router.GET("/side-nav", s.sideNav)
+	s.router.GET("/close-nav", s.closeNav)
 }
