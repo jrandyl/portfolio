@@ -2,6 +2,6 @@ templ:
 	templ generate
 
 tailwind:
-	npx tailwindcss -i web/src/index.css -o web/public/styles.css --watch
+	tailwindcss -i web/src/index.css -o web/public/styles.css --minify --watch
 
 .PHONY: templ tailwind
