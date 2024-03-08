@@ -3,17 +3,30 @@ package server
 import (
 	"github.com/a-h/templ"
 	"github.com/go-playground/validator"
+	"github.com/jrandyl/portfolio/database/sqlc"
+	"github.com/jrandyl/portfolio/token"
+	"github.com/jrandyl/portfolio/utils"
 	"github.com/labstack/echo/v4"
 )
 
 type Server struct {
-	router *echo.Echo
+	config         utils.Config
+	router         *echo.Echo
+	store          sqlc.Store
+	tokenGenerator token.Generator
 }
 
-func NewServer() (*Server, error) {
+func NewServer(config utils.Config, transaction sqlc.Store) (*Server, error) {
+	tokenGenerator, err := token.NewPasetoGenerator(config.TokenSymmetricKey)
+	if err != nil {
+		return nil, err
+	}
 
 	server := &Server{
-		router: echo.New(),
+		store:          transaction,
+		router:         echo.New(),
+		tokenGenerator: tokenGenerator,
+		config:         config,
 	}
 
 	server.SetupRouter()

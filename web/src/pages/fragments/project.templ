@@ -18,7 +18,7 @@ templ Project() {
                 <li class="mx-5 cursor-pointer"><a href="/experience" class="text-sky-900 font-medium hover:border-b-2 hover:border-sky-900">Experience</a></li>
             </ul>
             <div class="xl:flex ml-20 hidden">
-                <a href="#/get-in-touch" class="w-40 h-12 flex flex-row items-center justify-center transition ease-in-out delay-150 bg-sky-400 hover:scale-110 hover:bg-sky-600 duration-300 rounded-full text-white font-medium">Get In Touch</a>
+                <a href="/get-in-touch" class="w-40 h-12 flex flex-row items-center justify-center transition ease-in-out delay-150 bg-sky-400 hover:scale-110 hover:bg-sky-600 duration-300 rounded-full text-white font-medium">Get In Touch</a>
             </div>
         </div>
     </nav>
@@ -29,115 +29,23 @@ templ Project() {
         <h1 class="mt-20 text-sky-900 font-bold sm:text-5xl text-2xl">
             Featured Works
         </h1>
-        <div class="w-full h-9/12 flex lg:flex-row flex-col gap-6">
-            <div class="flex flex-col items-center px-10 py-10 md:gap-6 sm:gap-10 gap-20 w-full">
-                <div class="flex flex-col items-center">
-                    <h1 class="md:text-4xl text-lg text-sky-900 font-medium">WELA SCHOOL SYSTEM</h1>
-                </div>
-                <div class="flex lg:flex-row flex-col gap-10 items-center justify-center">
-                    <div class="h-96 w-48 flex">
-                        <img src="/assets/wela-mobile.svg" alt="wela-school-systems" class="object-fill h-96 w-44 rounded-md shadow-xl" />
-                    </div>
-                    <div class="sm:h-full sm:w-9/12 h-40 w-screen flex flex-col items-center">
-                        <div class="bg-white">
-                            <img src="/assets/wela.svg" alt="wela-school-systems" class="object-fit h-full w-screen rounded-md shadow-xl" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-auto h-full bg-white rounded-lg shadow-md px-4 py-10 flex flex-col items-center gap-10">
-                <div class="w-96 justify-center items-center gap-6 flex flex-col">
-                    <img src="/assets/wela-logo.svg" alt="wela-logo" class="object-cover h-12 w-44" />
-                    <a href="https://wela.online/" class="bg-sky-400 w-32 px-4 py-2 rounded-lg text-sm text-white text-center transition ease-in-out delay-150 hover:scale-110 hover:bg-sky-700 duration-300">View Website</a>
-                </div>
-                <p class="text-slate-500 md:text-2xl text-md text-left font-medium lg:w-72 w-auto">
-                    For the past two years, my primary focus has revolved around crafting sophisticated systems that streamline various aspects of school management, with a particular emphasis on Billing, Finance, and Accounting functionalities.
-                </p>
-            </div>
+        <div hx-get="/wela" hx-trigger="load" class="w-full h-9/12 flex lg:flex-row flex-col gap-6 items-center justify-center">
+            <img  alt="Result loading..." class="htmx-indicator" width="60" src="/assets/bars.svg"/>
         </div>
     </div>
     <div class="bg-slate-100 lg:h-screen h-full lg:w-screen w-screen flex flex-col pt-10 gap-10 items-center px-20 py-20">
-        <div class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44">
-            <div class="flex flex-col items-center px-10 py-10 md:gap-6 sm:gap-10 gap-20 w-full">
-                <div class="flex flex-col items-center">
-                    <h1 class="md:text-4xl text-lg text-sky-900 font-medium">CLARET SCHOOL OF ZAMBOANGA</h1>
-                </div>
-                <div class="flex lg:flex-row flex-col gap-10 items-center justify-center">
-                    <div class="h-96 w-48 flex">
-                        <img src="/assets/claret-school-mobile.svg" alt="wela-school-systems" class="object-fill h-96 w-44 rounded-md shadow-xl" />
-                    </div>
-                    <div class="sm:h-full sm:w-9/12 h-40 w-screen flex flex-col items-center">
-                        <div class="bg-white">
-                            <img src="/assets/claret-school.svg" alt="wela-school-systems" class="object-cover h-full w-screen rounded-md shadow-xl" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-auto h-full bg-white rounded-lg shadow-md px-4 py-10 flex flex-col items-center gap-10">
-                <div class="w-96 justify-center items-center gap-6 flex flex-col">
-                    <img src="/assets/claret-school-logo.svg" alt="wela-logo" class="object-cover h-24 w-24" />
-                    <a href="https://claretzambo.wela.ph/" class="bg-sky-400 w-32 px-4 py-2 rounded-lg text-sm text-white text-center transition ease-in-out delay-150 hover:scale-110 hover:bg-sky-700 duration-300">View Website</a>
-                </div>
-                <p class="text-slate-500 md:text-2xl text-md text-left font-medium lg:w-72 w-auto">
-                    I've played a pivotal role in the development and refinement of essential financial modules such as Sales, Disbursements, Inventory, Payroll, Financial Reports, Cost Centers, and Chart of Accounts within Claret School.
-                </p>
-            </div>
+        <div hx-get="/claret-school" hx-trigger="load" class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44 items-center justify-center">
+            <img  alt="Result loading..." class="htmx-indicator" width="60" src="/assets/bars.svg"/> 
         </div>
     </div>
     <div class="bg-slate-100 lg:h-screen h-full lg:w-screen w-screen flex flex-col pt-10 gap-10 items-center px-20 py-20">
-        <div class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44">
-            <div class="flex flex-col items-center px-10 py-10 md:gap-6 sm:gap-10 gap-20 w-full">
-                <div class="flex flex-col items-center">
-                    <h1 class="md:text-4xl text-lg text-sky-900 font-medium">ST. VINCENT DE PAUL DIOCESAN COLLEGE INC.</h1>
-                </div>
-                <div class="flex lg:flex-row flex-col gap-10 items-center justify-center">
-                    <div class="h-96 w-48 flex">
-                        <img src="/assets/svpdc-mobile.svg" alt="wela-school-systems" class="object-fill h-96 w-44 rounded-md shadow-xl" />
-                    </div>
-                    <div class="sm:h-full sm:w-9/12 h-40 w-screen flex flex-col items-center">
-                        <div class="bg-white">
-                            <img src="/assets/svpdc-school.svg" alt="wela-school-systems" class="object-cover h-full w-screen rounded-md shadow-xl" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-auto h-full bg-white rounded-lg shadow-md px-4 py-10 flex flex-col items-center gap-10">
-                <div class="w-96 justify-center items-center gap-6 flex flex-col">
-                    <img src="/assets/svpdc-logo.svg" alt="wela-logo" class="object-cover h-24 w-24" />
-                    <a href="https://svpdc.wela.ph/" class="bg-sky-400 w-32 px-4 py-2 rounded-lg text-sm text-white text-center transition ease-in-out delay-150 hover:scale-110 hover:bg-sky-700 duration-300">View Website</a>
-                </div>
-                <p class="text-slate-500 md:text-2xl text-md text-left font-medium lg:w-72 w-auto">
-                    One of the very first school assigned and task by wela to me. My very first project where I developed financial modules such as Sales, Disbursements, Inventory, Payroll, Financial Reports, Cost Centers, and Chart of Accounts. 
-                </p>
-            </div>
+        <div hx-get="/svpdc-school" hx-trigger="load" class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44 items-center justify-center">
+            <img  alt="Result loading..." class="htmx-indicator" width="60" src="/assets/bars.svg"/> 
         </div>
     </div>
     <div class="bg-slate-100 lg:h-screen h-full lg:w-screen w-screen flex flex-col pt-10 gap-10 items-center px-20 py-20">
-        <div class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44">
-            <div class="flex flex-col items-center px-10 py-10 md:gap-6 sm:gap-10 gap-20 w-full">
-                <div class="flex flex-col items-center">
-                    <h1 class="md:text-4xl text-lg text-sky-900 font-medium">SAMUEL CHRISTIAN COLLEGE</h1>
-                </div>
-                <div class="flex lg:flex-row flex-col gap-10 items-center justify-center">
-                    <div class="h-96 w-48 flex">
-                        <img src="/assets/scc-mobile.svg" alt="wela-school-systems" class="object-fill h-96 w-44 rounded-md shadow-xl" />
-                    </div>
-                    <div class="sm:h-full sm:w-9/12 h-40 w-screen flex flex-col items-center">
-                        <div class="bg-white">
-                            <img src="/assets/scc-school.svg" alt="wela-school-systems" class="object-cover h-full w-screen rounded-md shadow-xl" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-auto h-full bg-white rounded-lg shadow-md px-4 py-10 flex flex-col items-center gap-10">
-                <div class="w-96 justify-center items-center gap-6 flex flex-col">
-                    <img src="/assets/scc-logo.svg" alt="wela-logo" class="object-cover h-24 w-24" />
-                    <a href="https://svpdc.wela.ph/" class="bg-sky-400 w-32 px-4 py-2 rounded-lg text-sm text-white text-center transition ease-in-out delay-150 hover:scale-110 hover:bg-sky-700 duration-300">View Website</a>
-                </div>
-                <p class="text-slate-500 md:text-2xl text-md text-left font-medium lg:w-72 w-auto">
-                    My latest project at wela. I develop their Financial modules such as Chart of Accounts, Sales, Disbursements, Financial Reports and Cost Centers, also I conducted a training for them on how to use the system. 
-                </p>
-            </div>
+        <div hx-get="/scc-school" hx-trigger="load" class="w-full h-9/12 flex lg:flex-row flex-col gap-6 lg:mt-44 items-center justify-center">
+            <img  alt="Result loading..." class="htmx-indicator" width="60" src="/assets/bars.svg"/>
         </div>
     </div>
 }
